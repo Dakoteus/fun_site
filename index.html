@@ -1,7 +1,267 @@
-<!DOCTYPE html>
 <html>
-<body>
-    <a href='./website/index.html'>Math Undergrad Atlas</a>
-</body>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
+body {
+  background-color: #141414;
+  background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEyMCc+Cgk8ZGVmcz4KCQk8cGF0dGVybiBwYXR0ZXJuVW5pdHM9J3VzZXJTcGFjZU9uVXNlJyBpZD0nYycgd2lkdGg9JzYwJyBoZWlnaHQ9JzEyMCcgeD0nMCcgeT0nMCcgdmlld0JveD0nMCAwIDUgMTAnPgoJCQk8cGF0aCBmaWxsLW9wYWNpdHk9JzAnIHN0cm9rZT0nIzI5MjkyOScgc3Ryb2tlLXdpZHRoPScwLjA5JyBkPSdNLTIsMUw3LDEwTS0yLDZMNywxNU0tMiwtNEw3LDUnLz4KCQk8L3BhdHRlcm4+CgkJPHBhdHRlcm4gcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgaWQ9J2MyJyB3aWR0aD0nNjAnIGhlaWdodD0nMTIwJyB4PScxMDAlJyB5PScwJyB2aWV3Qm94PScwIDAgNSAxMCc+CgkJCTxwYXRoIGZpbGwtb3BhY2l0eT0nMCcgc3Ryb2tlPScjMjkyOTI5JyBzdHJva2Utd2lkdGg9JzAuMDknIGQ9J003LDFMLTIsMTBNNyw2TC0yLDE1TTcsLTRMLTIsNScvPgoJCTwvcGF0dGVybj4KCTwvZGVmcz4KCTxyZWN0IHdpZHRoPSc1MCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNjKScvPgoJPHJlY3QgeD0nNTAlJyB3aWR0aD0nNTAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjYzIpJy8+Cjwvc3ZnPg==');
+  
+    margin:0; padding:0;
+    overflow-x:hidden;
+    height:100%;
+    font-family: 'Lato', Helvetica, arial, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.45;
+    color: #eee;
+    color: rgba(255,255,255,.85);
+}
+#container { 
+    padding-top: 50px;
+}
+#content {
+    max-width: 43em;
+    padding:10px;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 4.8em;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin: 0;
+}
+h3 {
+    font-size: 2.4em;
+    font-weight: 300;
+    line-height: 1.5;
+}
+p, li {
+    font-size: 1.7em;
+}
+a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+}
+a:hover {
+    text-decoration: underline;
+}
+p#pleft {
+    max-width:19em;
+    float:left;
+    box-shadow: 0 0px 30px 0 rgba(0,0,0,0.11),
+    0 0px 10px 0 rgba(248, 248, 248, 0.150); 
+    background-color:#181818; 
+    padding: .5rem;
+    text-align: left;
+}
+p#pright {
+    max-width:19em;
+    float:left;
+    box-shadow: 0 0px 30px 0 rgba(0,0,0,0.11),
+    0 0px 10px 0px rgba(248, 248, 248, 0.150); 
+    background-color:#181818; 
+    padding: .5rem;
+    text-align:left;
+}
+ul {
+    clear:both;
+}
 
-</html>
+html { font-size: 62.5%; }
+body { font-size: 1em;}
+
+/* PYRAMID CODE */
+.stage {
+  -webkit-transform:scale(1.85);
+  transform:scale(0.85);
+  bottom:150px;
+  right: 5%;
+  width:0px; height:0px;
+  
+  position:absolute;  
+  -webkit-perspective:1200px;
+  -webkit-perspective-origin:50% 50%;
+  perspective:1200px;
+  perspective-origin:50% 50%;
+}
+.pyramid3d {
+  position:absolute;
+  width:150px;
+  height:150px;
+  
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(75deg) rotate(65deg);
+  transform: rotateX(75deg) rotate(65deg);
+  -webkit-animation: turnPyramid 10s linear infinite;
+  animation: turnPyramid 10s linear infinite;
+}
+.triangle {
+  -webkit-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+  width:0; height:0;
+  background:none;
+}
+.triangle:before{
+  content:"";
+  position: absolute;
+  height: 0; width: 0;
+  border-style: solid;
+  border-width: 176px 75px 0 75px;
+}
+.side1 { -webkit-transform: translatex(0) rotatey(115.2deg) rotatez(90deg); transform: translatex(0) rotatey(115.2deg) rotatez(90deg); }
+.side2 { -webkit-transform: translatex(150px) rotatez(90deg) rotatex(64.8deg); transform: translatex(150px) rotatez(90deg) rotatex(64.8deg); }
+.side3 {  -webkit-transform: translatez(0) rotatex(64.8deg); transform: translatez(0) rotatex(64.8deg); }
+.side4 { -webkit-transform: translatey(150px) rotatex(115.2deg); transform: translatey(150px) rotatex(115.2deg); }
+.side1:before{ border-color: rgba(115, 115, 0, 0.3) transparent transparent transparent; }
+.side2:before{ border-color: rgba(20, 90, 225, 0.3) transparent transparent transparent; }
+.side3:before{ border-color: rgba(255,   0, 0, 0.3) transparent transparent transparent; } 
+.side4:before{ border-color: rgba(0, 255, 255, 0.3) transparent transparent transparent; }
+
+
+@-webkit-keyframes turnPyramid { 100% { -webkit-transform: rotateX(75deg) rotate(425deg); } }
+@keyframes turnPyramid { 100% { transform: rotateX(75deg) rotate(425deg); } }
+
+@media (max-width: 300px) {
+    html { font-size: 70%; }
+    .stage { -webkit-transform:scale(0.05); transform:scale(0.05); }
+}
+@media (max-width: 440px) {
+    h1 { line-height:55px; }    
+}
+@media (max-width: 460px) { 
+  .stage { position:absolute; top:25px; left:50%; margin-left:-45px; } 
+  h1 { margin-top:50px; text-align:center; }
+}
+@media (max-width:600px) { .stage { -webkit-transform:scale(0.55); transform:scale(0.55); margin-right:60px; } }
+@media (min-width: 600px) {
+    html { font-size: 80%; }
+    .stage { -webkit-transform:scale(0.68); transform:scale(0.68); margin-right:80px; }
+}
+@media (min-width: 880px) {
+    html { font-size: 120%; }
+    p, li { font-size: 1em; }
+    p#pright { margin-left:3em; }
+    .stage { -webkit-transform:scale(0.85); transform:scale(0.85); margin-right:120px; }
+}
+.menu{
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  transition: 1s;
+  width: 0px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  overflow: hidden; /* Disable horizontal scroll */
+  left: 0px;
+  top: 0px;
+  background:#212121;
+  font-family: 'Lato', Helvetica, arial, sans-serif;
+  }
+  .menu span a{
+    color: #999999;
+  }
+  .menu span:hover{
+    display:table-cell;
+    width:15%;
+    vertical-align:left;  
+    position:fixed;
+    background-color:#37474f;
+  }
+  .menu span{
+    position:absolute;
+    left: 0;
+  }
+  .menu h1{
+    text-align: center;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    color: #999999;
+    font-size:40px;
+  }
+  .menu p{
+    text-align: center;
+    margin-top: .5em;
+    margin-bottom:.5em;
+    color: #999999;
+    font-size: 20px;
+  }
+  .menu center
+  {
+    margin-top: .5em;
+  }
+  .menu ul{
+    list-style-type:'▢  ';
+    font-size: 15px;
+  }
+  .menu ul li{
+    /*margin: 0;
+	padding: 0px 30px 0px;
+    background-image: url("arrow.png");
+    background-position: left center;
+    background-size:30px;
+    background-repeat:no-repeat;*/
+  }
+  .menu ul li a{
+    font-size: 15px;
+    left: 3%;
+    color:#999999;
+    font-weight: normal;
+  }
+
+    </style>
+<body>
+        <!-- div for menu bar -->
+<div class="menu", id="menu">
+    <center><a href = "./index.html"><img src="./website/thrm.png" width="120px" height="85px"></a></center>
+    <h1>Welcome!</h1>
+    <p>Here's some links.</p>
+    <ul>
+      <!--<li><span><a class="icon icon-data" href="./pages/About Me.html">About Me & Website</a></span></li> -->
+      <li><a href="https://github.com/Dakoteus">Github</a></li>
+      <li><a href="https://www.linkedin.com/in/dakota-wicker-06658013b/">LinkedIn</a></li>
+      <li><a href="./website/index.html">Math Atlas</a>
+      <!-- <li><span><a class="icon icon-data" href="./pages/Contact Me.html">Contact Me</a></span></li> -->
+    </ul>
+  </div>
+
+<div id="container">
+    <div id="content">
+      <div id="about">
+        <h1>
+          <div style='text-align: center; margin-bottom:20px;'>
+            Dakota Wicker
+          </div>
+          <div class="stage">
+            <div class="pyramid3d">
+              <div class="triangle side1"></div>
+              <div class="triangle side2"></div>
+              <div class="triangle side3"></div>
+              <div class="triangle side4"></div>
+            </div>
+          </div> 
+        </h1>
+        <h3 style='text-align: center;clear:both' class="subhead">
+          I am a programmer and mathematician based in Rochester, New York.
+        </h3>
+        <p id='pleft'>
+          I am most comfortable in C++, Python, and C#.
+          But, I do have experience in Bash, JS and LaTeX.
+          In the future, I plan to learn languages such as Haskell and Rust if it's convenient. 
+        </p>
+        <p id='pright'>
+            Mathematically, I am comfortable with subjects such as Linear Algebra, Calculus, and Discrete Math,
+            but in my free time I study abstract algebra and category theory.
+        </p>
+        <p>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+  <script>
+       setTimeout(function openNav() {
+  document.getElementById("menu").style.width = "15%";
+  //document.getElementById("container").style.width = "85%";
+  },0);
+      </script>
+  </body>
+
+  </html>
