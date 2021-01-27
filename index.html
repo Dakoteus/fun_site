@@ -19,18 +19,18 @@ body {
     padding-top: 50px;
 }
 #content {
-    max-width: 43em;
-    padding:10px;
+    max-width: 70%;
+    padding:1%;
     margin: 0 auto;
 }
 h1 {
-    font-size: 4.8em;
+    font-size: 400%;
     font-weight: 100;
     text-transform: uppercase;
     margin: 0;
 }
 h3 {
-    font-size: 2.4em;
+    font-size: 200%;
     font-weight: 300;
     line-height: 1.5;
 }
@@ -46,22 +46,24 @@ a:hover {
     text-decoration: underline;
 }
 p#pleft {
-    max-width:19em;
-    float:left;
+    max-width:30%;
+    display: inline-block;
     box-shadow: 0 0px 30px 0 rgba(0,0,0,0.11),
     0 0px 10px 0 rgba(248, 248, 248, 0.150); 
     background-color:#181818; 
     padding: .5rem;
     text-align: left;
+    font-size: 1vw;
 }
 p#pright {
-    max-width:19em;
-    float:left;
+    max-width:30%;
+    display: inline-block;
     box-shadow: 0 0px 30px 0 rgba(0,0,0,0.11),
     0 0px 10px 0px rgba(248, 248, 248, 0.150); 
     background-color:#181818; 
     padding: .5rem;
     text-align:left;
+    font-size:1vw;
 }
 ul {
     clear:both;
@@ -74,7 +76,7 @@ body { font-size: 1em;}
 .stage {
   -webkit-transform:scale(1.85);
   transform:scale(0.85);
-  bottom:150px;
+  bottom:15%;
   right: 5%;
   width:0px; height:0px;
   
@@ -147,8 +149,8 @@ body { font-size: 1em;}
 .menu{
   height: 100%; /* Full-height: remove this if you want "auto" height */
   transition: 1s;
-  width: 0px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  width: 0%; /* Set the width of the sidebar */
+  position: absolute; /* Fixed Sidebar (stay in place on scroll) */
   overflow: hidden; /* Disable horizontal scroll */
   left: 0px;
   top: 0px;
@@ -174,14 +176,14 @@ body { font-size: 1em;}
     margin-top: .5em;
     margin-bottom: .5em;
     color: #999999;
-    font-size:40px;
+    font-size:2.5vw;
   }
   .menu p{
     text-align: center;
     margin-top: .5em;
     margin-bottom:.5em;
     color: #999999;
-    font-size: 20px;
+    font-size: 1.25vw;
   }
   .menu center
   {
@@ -189,7 +191,7 @@ body { font-size: 1em;}
   }
   .menu ul{
     list-style-type:'▢  ';
-    font-size: 15px;
+    font-size: 1vw;
   }
   .menu ul li{
     /*margin: 0;
@@ -205,6 +207,10 @@ body { font-size: 1em;}
     color:#999999;
     font-weight: normal;
   }
+#about
+{
+    width:100%;
+}
 
     </style>
 <body>
@@ -226,7 +232,7 @@ body { font-size: 1em;}
     <div id="content">
       <div id="about">
         <h1>
-          <div style='text-align: center; margin-bottom:20px;'>
+          <div style='font-size:100%;text-align: center; margin-bottom:20px;'>
             Dakota Wicker
           </div>
           <div class="stage">
@@ -241,15 +247,19 @@ body { font-size: 1em;}
         <h3 style='text-align: center;clear:both' class="subhead">
           I am a programmer and mathematician based in Rochester, New York.
         </h3>
+        <center>
+        <div id="boxes">
         <p id='pleft'>
           I am most comfortable in C++, Python, and C#.
-          But, I do have experience in Bash, JS and LaTeX.
+         But, I do have experience in Bash, JS and LaTeX.
           In the future, I plan to learn languages such as Haskell and Rust if it's convenient. 
         </p>
         <p id='pright'>
             Mathematically, I am comfortable with subjects such as Linear Algebra, Calculus, and Discrete Math,
             but in my free time I study abstract algebra and category theory.
         </p>
+        </div>
+        </center>
         <p>
           
         </p>
@@ -259,9 +269,7 @@ body { font-size: 1em;}
   <script>
        setTimeout(function openNav() {
   document.getElementById("menu").style.width = "15%";
-  //document.getElementById("container").style.width = "85%";
   },0);
       </script>
   </body>
-
   </html>
