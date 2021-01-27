@@ -86,10 +86,10 @@ body { font-size: 1em;}
 }
 
 .pyramid3d {
-  position:absolute;
+  position:fixed;
   width:150px;
   height:150px;
-  
+
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transform: rotateX(75deg) rotate(65deg);
@@ -103,6 +103,8 @@ body { font-size: 1em;}
   width:0px; height:0;
   background:none;
   border-style:none;
+  bottom:15%;
+  right: 12.5%;
 }
 .triangle:before{
   content:"";
@@ -115,7 +117,7 @@ body { font-size: 1em;}
 .side2 { -webkit-transform: translatex(150px) rotatez(90deg) rotatex(64.8deg); transform:translatex(150px) rotatez(90deg) rotatex(64.8deg); }
 .side3 {  -webkit-transform: translatez(0) rotatex(64.8deg); transform:translatez(0) rotatex(64.8deg); }
 .side4 { -webkit-transform: translatey(150px) rotatex(115.2deg); transform:translatey(150px) rotatex(115.2deg); }
-.side1:before{ border-color: rgba(100, 100, 100, 0.30) transparent transparent transparent;}
+.side1:before{ border-color: rgba(100, 100, 100, 0.25) transparent transparent transparent;}
 .side2:before{ border-color: rgba(130, 130, 130, 0.25) transparent transparent transparent;}
 .side3:before{ border-color: rgba(120, 120, 120, 0.25) transparent transparent transparent;} 
 .side4:before{ border-color: rgba(100, 100, 100, 0.25) transparent transparent transparent;}
@@ -254,26 +256,6 @@ body { font-size: 1em;}
     </div>
   </div>
   <script>
-          window.addEventListener('resize', transformation);
-          var allRules = [];
-var sSheetList = document.styleSheets;
-for (var sSheet = 0; sSheet < sSheetList.length; sSheet++)
-{
-    var ruleList = document.styleSheets[sSheet].cssRules;
-    for (var rule = 0; rule < ruleList.length; rule ++)
-    {
-       allRules.push( ruleList[rule].selectorText );
-    }
-}
-console.log(allRules);
-          function transformation(){
-            var sc = window.innerWidth * .01;
-            console.log(sc);
-            document.getElementsByClassName("side1")[0].style.transform = "translatex(0) rotatey(115.2deg) rotatez(90deg) scale(" + toString(sc) + ")";
-            document.getElementsByClassName("side2")[0].style.transform = "scale(" + toString(sc) + ")";
-            document.getElementsByClassName("side3")[0].style.transform = "scale(" + toString(sc) + ")";
-            document.getElementsByClassName("side4")[0].style.transform = "scale(" + toString(sc) + ")";
-          }
        setTimeout(function openNav() {
   document.getElementById("menu").style.width = "15%";
   },0);
