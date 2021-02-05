@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <title>⛧ 𝔇 𝔞 κ 𝔬 𝔱 𝔞  ◬  𝔚 𝔦 𝔠 κ 𝔢 𝔯 ☾</title>
+    <meta charset="UTF-8">
+        <style>
+    @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
+    #spotify
+    {
+    position:absolute;
+    border-radius: .5vw;
+    margin-top: 2vh;
+    width: 15vw;
+    display:none;
+    height: 8.3vh;
+    bottom: 8vh;
+    box-shadow: 0 0px 30px 0 rgba(0,0,0,0.11),
+    0 0px 10px 0 rgba(248, 248, 248, 0.150); 
+    }
+    #ko-fi
+    {
+    position: absolute;
+    border-bottom:dashed #c4afaf  1px;
+    color:#999999;
+    font-weight:300;
+    font-size:1.5vw;
+    text-decoration:none;
+    bottom:2vh;
+    left:10%;
+    }
+    #me
+    {
+    border-radius: 10vw;
+    max-width: 10vw;
+    margin-bottom: -2vh;
+    }
+    #other-links{
+    position: absolute;
+    list-style: none;
+    margin:0;
+    padding:0;
+    left: 0%;
+    transform: translatex(10%);
+    /*text-align:center;*/
+    }
+    #other-links li{
+    margin-bottom: 1vh;
+    }
+    #other-links li a{
+    position:relative;
+    border-bottom:dashed #999999  1px;
+    color:#999999;
+    font-weight:300;
+    font-size:1.5vw;
+    text-decoration:none;
+    }
+    body
+    {
+    background-color: #141414;
+    background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEyMCc+Cgk8ZGVmcz4KCQk8cGF0dGVybiBwYXR0ZXJuVW5pdHM9J3VzZXJTcGFjZU9uVXNlJyBpZD0nYycgd2lkdGg9JzYwJyBoZWlnaHQ9JzEyMCcgeD0nMCcgeT0nMCcgdmlld0JveD0nMCAwIDUgMTAnPgoJCQk8cGF0aCBmaWxsLW9wYWNpdHk9JzAnIHN0cm9rZT0nIzI5MjkyOScgc3Ryb2tlLXdpZHRoPScwLjA5JyBkPSdNLTIsMUw3LDEwTS0yLDZMNywxNU0tMiwtNEw3LDUnLz4KCQk8L3BhdHRlcm4+CgkJPHBhdHRlcm4gcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgaWQ9J2MyJyB3aWR0aD0nNjAnIGhlaWdodD0nMTIwJyB4PScxMDAlJyB5PScwJyB2aWV3Qm94PScwIDAgNSAxMCc+CgkJCTxwYXRoIGZpbGwtb3BhY2l0eT0nMCcgc3Ryb2tlPScjMjkyOTI5JyBzdHJva2Utd2lkdGg9JzAuMDknIGQ9J003LDFMLTIsMTBNNyw2TC0yLDE1TTcsLTRMLTIsNScvPgoJCTwvcGF0dGVybj4KCTwvZGVmcz4KCTxyZWN0IHdpZHRoPSc1MCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNjKScvPgoJPHJlY3QgeD0nNTAlJyB3aWR0aD0nNTAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjYzIpJy8+Cjwvc3ZnPg==');
+    margin:0; padding:0;
+    overflow-x:hidden;
+    font-family: 'Lato', Helvetica, arial, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.45;
+    color: #eee;
+    color: rgba(255,255,255,.85);
+    }
+    h1
+    {
+    font-size: 2vw;
+    font-weight: 300;
+    line-height: 1.5;
+    }
+    #container { 
+    padding-top: 50px;
+    }
+    .menu{
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    transition: 1s;
+    width: 0%; /* Set the width of the sidebar */
+    position: absolute; /* Fixed Sidebar (stay in place on scroll) */
+    overflow: hidden; /* Disable horizontal scroll */
+    left: 0px;
+    top: 0px;
+    background:#212121;
+    font-family: 'Lato', Helvetica, arial, sans-serif;
+    box-shadow: 0 0px 30px 0 rgba(0,0,0,0.11),
+    0 0px 15px 0 rgba(248, 248, 248, 0.150); 
+    }
+  .menu span a{
+    color: #999999;
+  }
+  .menu span:hover{
+    display:table-cell;
+    width:15%;
+    vertical-align:left;  
+    position:fixed;
+    background-color:#37474f;
+  }
+  .menu span{
+    position:absolute;
+    left: 0;
+  }
+  .menu h1{
+    text-align: center;
+    margin-top: .5em;
+    margin-bottom: 1vh;
+    font-weight:100;
+    text-transform: uppercase;
+    color: #999999;
+    font-size:2.5vw;
+  }
+  .menu p{
+    text-align: center;
+    margin-top: .5em;
+    margin-bottom:.5em;
+    color: #999999;
+    font-size: 1.5vw;
+  }
+  .menu center
+  {
+    margin-top: 2vh;
+  }
+  .menu ul{
+    list-style-type:'▢  ';
+    font-size: .75vw;
+    margin-bottom: 1.5vw;
+  }
+  .menu ul li a{
+    font-size: 15px;
+    left: 3%;
+    text-decoration: none;
+    color:#999999;
+    font-weight: normal;
+  }
+  #ppl
+  {
+    position: absolute;
+  }
+  #ppl ul
+  {
+    list-style-type:'○  ';
+  }
+  #ppl ul li a
+  {
+    color: #999999;
+    text-decoration:none;
+    border-bottom:solid #999999  1px;
+  }
+  #resources
+  {
+    font-weight:300;
+    position:absolute;
+    left: 20%;
+    width: 80%;
+  }
+        </style>
+        <body>
+            <div class="menu" id="menu">
+                <center><a href = "../index.html"><img src="../me.jpg" id = "me"></a></center>
+                <h1>Welcome!</h1>
+                <p>Here's some links.</p>
+                <ul>
+                  <!--<li><span><a class="icon icon-data" href="./pages/About Me.html">About Me & Website</a></span></li> -->
+                  <li><a href="https://github.com/Dakoteus">Github</a></li>
+                  <li><a href="https://www.linkedin.com/in/dakota-wicker-06658013b/">LinkedIn</a></li>
+                  <li><a href="../website/index.html">Math Atlas</a>
+                  <!-- <li><span><a class="icon icon-data" href="./pages/Contact Me.html">Contact Me</a></span></li> -->
+                </ul>
+                <ul id = "other-links">
+                <li><a href = "mailto: dakoteus2117@gmail.com" id = "email">Contact me!</a></li>
+                <li><a href = '#' onclick="Spotify_Appear()" id = "spotify-text">Spotify</a></li>
+                </ul>
+            <iframe src="https://open.spotify.com/embed/playlist/6n6NheA0d5bfzUqnyYavIr" frameborder="0" allowtransparency="true" allow="encrypted-media" id = "spotify"></iframe>
+            <a href = "https://ko-fi.com/dakoteus" id = "ko-fi">ko-fi!</a>
+            </div> 
+            <center>
+            <div id="container">
+            <h1> Here's some links that I find really helpful or interesting.</h1>
+        </div>
+            </center>
+            <div id = "resources">
+            <div id="ppl">
+                <div>Other websites and blogs:</div>
+                <ul>
+                    <li><a href="https://bartoszmilewski.com/">Bartosz Milewski's Programming Café - Blog of an amazing Mathematician and Programmer</li>
+                    <li><a href="https://www.math3ma.com/about">Math3ma - Tai-Danae Bradley's amazing website containing amazing blogs on mathematics</li>
+                    <li><a href="https://dantepfer.com/blog/">Dan Tepfer - An amazing musician</li>
+                    <li><a href="https://tedgreene.com/teaching/default.asp">Ted Greene - A website dedicated to the amazing Ted Greene</li>
+                    <li><a href="https://terrytao.wordpress.com/">Terance Tao - An amazing Mathematician and his blog</li>
+                    <li><a href="https://fauux.neocities.org/">Fauux - Lain fan site and personal blog</li>
+                    <li><a href="https://www.nayuki.io/">Project Nayuki - A blog by Nayuki, a software dev</li>
+                    <li><a href="https://cookingonabootstrap.com/">Cooking On A Bootstrap - Jack Monroe's budget cooking recipe website</li>
+                    <li><a href="http://cyberplant.xyz/posts/">cyberplant - up and coming intricate game on plants created by @logicsoup and @epcc10</li>
+                    <li><a href="https://bepisdraws.tumblr.com/">bepis - friend make art</li>             
+                    <li><a href="https://umazalakain.info/">Uma Zalakain - PhD at University of Glasgow</li>               
+                    <li><a href="https://julesh.com/"> Jules Hedges - Researcher & Lecturer at University of Strathclyde</li>  
+                    </ul>
+            </div>
+            </div>
+            <iframe src="https://open.spotify.com/embed/playlist/6n6NheA0d5bfzUqnyYavIr" frameborder="0" allowtransparency="true" allow="encrypted-media" id = "spotify"></iframe>
+        </body>
+        <script>
+       setTimeout(function openNav() {
+        document.getElementById("menu").style.width = "15%";
+        },0);
+        function Spotify_Appear()
+        {
+            var state = document.getElementById("spotify").style.display;
+            if(state == "inline"){document.getElementById("spotify").style.display = "none";}
+            else{document.getElementById("spotify").style.display = "inline";}
+        }
+        </script>
+</html>
