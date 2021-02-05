@@ -21,7 +21,8 @@
     position: absolute;
     border-bottom:dashed #c4afaf  1px;
     color:#999999;
-    font-weight:300;
+    font-weight:100;
+    transform:translatex(-5px);
     font-size:1.5vw;
     text-decoration:none;
     bottom:2vh;
@@ -40,7 +41,7 @@
     padding:0;
     left: 0%;
     transform: translatex(10%);
-    /*text-align:center;*/
+    font-weight:100;
     }
     #other-links li{
     margin-bottom: 1vh;
@@ -51,6 +52,7 @@
     color:#999999;
     font-weight:300;
     font-size:1.5vw;
+    font-weight:100;
     text-decoration:none;
     }
     body
@@ -61,11 +63,11 @@
     overflow-x:hidden;
     font-family: 'Lato', Helvetica, arial, sans-serif;
     font-weight: 300;
-    font-size: 20px;
     line-height: 1.45;
     color: #eee;
     color: rgba(255,255,255,.85);
     }
+
     h1
     {
     font-size: 2vw;
@@ -88,22 +90,9 @@
     box-shadow: 0 0px 30px 0 rgba(0,0,0,0.11),
     0 0px 15px 0 rgba(248, 248, 248, 0.150); 
     }
-  .menu span a{
-    color: #999999;
-  }
-  .menu span:hover{
-    display:table-cell;
-    width:15%;
-    vertical-align:left;  
-    position:fixed;
-    background-color:#37474f;
-  }
-  .menu span{
-    position:absolute;
-    left: 0;
-  }
   .menu h1{
     text-align: center;
+    font-weight:100;
     margin-top: .5em;
     margin-bottom: 1vh;
     font-weight:100;
@@ -112,28 +101,38 @@
     font-size:2.5vw;
   }
   .menu p{
-    text-align: center;
+    text-align: left;
+    margin-left: 10%;
+    font-weight:100;
+    transform:translatex(-5px);
     margin-top: .5em;
     margin-bottom:.5em;
     color: #999999;
     font-size: 1.5vw;
+    font-weight:100;
   }
   .menu center
   {
     margin-top: 2vh;
   }
   .menu ul{
+    text-align:left;
+    display:block;
+    padding:0;
     list-style-type:'▢  ';
-    font-size: .75vw;
+    margin-left:16%;
+    font-size: .5vw;
     margin-bottom: 1.5vw;
   }
+  .menu li {font-size: 1.7em;}
   .menu ul li a{
     font-size: 15px;
     left: 3%;
+    font-weight:300;
     text-decoration: none;
     color:#999999;
-    font-weight: normal;
   }
+  
   #ppl
   {
     position: absolute;
@@ -146,7 +145,6 @@
   {
     color: #999999;
     text-decoration:none;
-    border-bottom:solid #999999  1px;
   }
   #resources
   {
