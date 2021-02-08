@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <title>⛧ 𝔇 𝔞 κ 𝔬 𝔱 𝔞  ◬  𝔚 𝔦 𝔠 κ 𝔢 𝔯 ☾</title>
+    <title>Dakota Wicker</title>
     <meta charset="UTF-8">
         <style>
     @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
@@ -184,7 +184,7 @@
             </center>
             <div id = "resources">
             <div id="ppl">
-                <div id="open_close" onclick="Expand()">▸Other websites and blogs:</div>
+                <div id="ppl_oc" onclick="Expand(this)">▸Other websites and blogs:</div>
                 <ul id = "people">
                     <li><a href="https://bartoszmilewski.com/">Bartosz Milewski's Programming Café - Blog of an amazing Mathematician and Programmer</li>
                     <li><a href="https://www.math3ma.com/about">Math3ma - Tai-Danae Bradley's amazing website containing amazing blogs on mathematics</li>
@@ -200,7 +200,10 @@
                     <li><a href="https://julesh.com/"> Jules Hedges - Researcher & Lecturer at University of Strathclyde</li>  
                     </ul>
             </div>
+            <!--<div id="">▸Useful resources</div>
+            <div id="useful resources">
             </div>
+            </div> -->
             <iframe src="https://open.spotify.com/embed/playlist/6n6NheA0d5bfzUqnyYavIr" frameborder="0" allowtransparency="true" allow="encrypted-media" id = "spotify"></iframe>
         </body>
         <script>
@@ -213,8 +216,13 @@
             if(state == "inline"){document.getElementById("spotify").style.display = "none";}
             else{document.getElementById("spotify").style.display = "inline";}
         }
-        function Expand()
+        function Expand(ele)
         {
+            const data = 
+            {
+              people : "people",
+              resources : "resources"
+            }
             var disp = document.getElementById("people").style.display;
             console.log(disp)
             if(disp == ""){
