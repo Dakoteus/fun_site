@@ -2,259 +2,18 @@
 <html>
   <title>Dakota Wicker</title>
   <meta charset="UTF-8">
-    <style>
-        @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
-body {
-    background-color: #141414;
-    background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEyMCc+Cgk8ZGVmcz4KCQk8cGF0dGVybiBwYXR0ZXJuVW5pdHM9J3VzZXJTcGFjZU9uVXNlJyBpZD0nYycgd2lkdGg9JzYwJyBoZWlnaHQ9JzEyMCcgeD0nMCcgeT0nMCcgdmlld0JveD0nMCAwIDUgMTAnPgoJCQk8cGF0aCBmaWxsLW9wYWNpdHk9JzAnIHN0cm9rZT0nIzI5MjkyOScgc3Ryb2tlLXdpZHRoPScwLjA5JyBkPSdNLTIsMUw3LDEwTS0yLDZMNywxNU0tMiwtNEw3LDUnLz4KCQk8L3BhdHRlcm4+CgkJPHBhdHRlcm4gcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgaWQ9J2MyJyB3aWR0aD0nNjAnIGhlaWdodD0nMTIwJyB4PScxMDAlJyB5PScwJyB2aWV3Qm94PScwIDAgNSAxMCc+CgkJCTxwYXRoIGZpbGwtb3BhY2l0eT0nMCcgc3Ryb2tlPScjMjkyOTI5JyBzdHJva2Utd2lkdGg9JzAuMDknIGQ9J003LDFMLTIsMTBNNyw2TC0yLDE1TTcsLTRMLTIsNScvPgoJCTwvcGF0dGVybj4KCTwvZGVmcz4KCTxyZWN0IHdpZHRoPSc1MCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNjKScvPgoJPHJlY3QgeD0nNTAlJyB3aWR0aD0nNTAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjYzIpJy8+Cjwvc3ZnPg==');
-    margin:0; padding:0;
-    overflow-x:hidden;
-    font-family: 'Lato', Helvetica, arial, sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 1.45;
-    color: #eee;
-    color: rgba(255,255,255,.85);
-    }
-#container { 
-    padding-top: 50px;
-}
-#content {
-    max-width: 70%;
-    padding:1%;
-    margin: 0 auto;
-}
-h1 {
-    font-size: 4vw;
-    font-weight: 100;
-    text-transform: uppercase;
-    margin: 0;
-}
-h3 {
-    font-size: 2vw;
-    font-weight: 300;
-    line-height: 1.5;
-}
-p, li {
-    font-size: 1.7em;
-}
-a {
-    font-weight: 700;
-    text-decoration: none;
-    color: #fff;
-}
-a:hover {
-    text-decoration: underline;
-}
-p#pleft {
-    max-width:30%;
-    display: inline-block;
-    box-shadow: 0 0px 30px 0 rgba(0,0,0,0.11),
-    0 0px 10px 0 rgba(248, 248, 248, 0.150); 
-    background-color:#181818; 
-    padding: 1rem;
-    text-align: left;
-    font-size: 1vw;
-    margin-right: 4vw;
-}
-p#pright {
-    max-width:30%;
-    display: inline-block;
-    box-shadow: 0 0px 30px 0 rgba(0,0,0,0.11),
-    0 0px 10px 0px rgba(248, 248, 248, 0.150); 
-    background-color:#181818; 
-    padding: 1rem;
-    text-align:left;
-    font-size:1vw;
-}
-ul {
-    clear:both;
-}
-
-html { font-size: 62.5%; }
-body { font-size: 1em;}
-
-/* PYRAMID CODE */
-.stage {
-  -webkit-transform:scale(1.85);
-  transform:scale(1);
-  bottom:15%;
-  right: 12.5%;
-  width: 0; height: 0;
-  position:absolute;
-}
-
-.pyramid3d {
-  position:fixed;
-  width:150px;
-  height:150px;
-
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transform: rotateX(75deg) rotate(65deg);
-  transform: rotateX(75deg) rotate(65deg);
-  -webkit-animation: turnPyramid 5s linear infinite;
-  animation: turnPyramid 5s linear infinite;
-}
-.triangle {
-  -webkit-transform-style:preserve-3d;
-  transform-style:preserve-3d;
-  width:0px; height:0;
-  background:none;
-  border-style:none;
-  bottom:15%;
-  right: 12.5%;
-}
-.triangle:before{
-  content:"";
-  position: absolute;
-  height: 0px; width: 0px;
-  border-style:dashed;
-  border-width:176px 75px 0 75px;
-}
-.side1 { -webkit-transform: translatex(0) rotatey(115.2deg) rotatez(90deg); transform:translatex(0) rotatey(115.2deg) rotatez(90deg);}
-.side2 { -webkit-transform: translatex(150px) rotatez(90deg) rotatex(64.8deg); transform:translatex(150px) rotatez(90deg) rotatex(64.8deg); }
-.side3 {  -webkit-transform: translatez(0) rotatex(64.8deg); transform:translatez(0) rotatex(64.8deg); }
-.side4 { -webkit-transform: translatey(150px) rotatex(115.2deg); transform:translatey(150px) rotatex(115.2deg); }
-.side1:before{ border-color: rgba(100, 100, 100, 0.25) transparent transparent transparent;}
-.side2:before{ border-color: rgba(130, 130, 130, 0.25) transparent transparent transparent;}
-.side3:before{ border-color: rgba(120, 120, 120, 0.25) transparent transparent transparent;} 
-.side4:before{ border-color: rgba(100, 100, 100, 0.25) transparent transparent transparent;}
-
-
-@-webkit-keyframes turnPyramid { 100% { -webkit-transform: rotateX(75deg) rotate(425deg); } }
-@keyframes turnPyramid { 100% { transform:rotateX(75deg) rotate(425deg); } }
-
-
-/*1070px */
-@media (max-width: 1463px),(max-height: 700px) {
-    .stage { -webkit-transform:scale(0.75); transform:scale(0.75); margin-right:0px;bottom:13%;}
-}
-@media (max-width: 1050px), (max-height:600px) { 
-  .stage {-webkit-transform:scale(0.50); transform:scale(0.50); margin-right:0px; right:10%;bottom:10%; } 
-}
-@media (max-width: 740px), (max-height:530px) {
-    .stage {-webkit-transform:scale(0.40); transform:scale(0.40); right: 10%;}
-}
-
-.menu{
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  transition: 1s;
-  width: 0%; /* Set the width of the sidebar */
-  position: absolute; /* Fixed Sidebar (stay in place on scroll) */
-  overflow: hidden; /* Disable horizontal scroll */
-  left: 0px;
-  top: 0px;
-  background:#212121;
-  font-family: 'Lato', Helvetica, arial, sans-serif;
-  box-shadow: 0 0px 30px 0 rgba(0,0,0,0.11),
-    0 0px 15px 0 rgba(248, 248, 248, 0.150); 
-  
-  }
-  .menu h1{
-    text-align: center;
-    margin-top: .5em;
-    margin-bottom: 1vh;
-    color: #999999;
-    font-size:2.5vw;
-  }
-  .menu p{
-    text-align: left;
-    margin-left: 10%;
-    font-weight:100;
-    transform:translatex(-5px);
-    margin-top: .5em;
-    margin-bottom:.5em;
-    color: #999999;
-    font-size: 1.5vw;
-  }
-  .menu center
-  {
-    margin-top: 2vh;
-  }
-  .menu ul{
-    text-align:left;
-    display:block;
-    padding:0;
-    list-style-type:'▢  ';
-    margin-left:16%;
-    font-size: .5vw;
-    margin-bottom: 1.5vw;
-  }
-  .menu ul li a{
-    font-size: 15px;
-    font-weight:300;
-    left: 3%;
-    text-decoration:none;
-    color:#999999;
-  }
-#about
-{
-    width:100%;
-}
-#job{
-  font-size:1vw;
-}
-#ko-fi
-{
-    position: absolute;
-    transform:translatex(-5px);
-    border-bottom:dashed #999999  1px;
-    color:#999999;
-    font-weight:100;
-    font-size:1.5vw;
-    text-decoration:none;
-    bottom:2vh;
-    left:10%;
-}
-#me
-{
-  border-radius: 10vw;
-  max-width: 10vw;
-  margin-bottom: -1vw;
-}
-#spotify
-{
-  position:absolute;
-  border-radius: .5vw;
-  margin-top: 2vh;
-  width: 15vw;
-  display:none;
-  height: 8.3vh;
-  bottom: 8vh;
-  box-shadow: 0 0px 30px 0 rgba(0,0,0,0.11),
-    0 0px 10px 0 rgba(248, 248, 248, 0.150); 
-}
-#other-links{
-  position: absolute;
-  list-style: none;
-  margin:0;
-  padding:0;
-  left: 0%;
-  transform: translatex(10%);
-  font-weight:100;
-  }
-#other-links li{
-  margin-bottom: 1vh;
-}
-#other-links ul{padding:0;}
-#other-links li a{
-    position:relative;
-    border-bottom:dashed #999999  1px;
-    color:#999999;
-    font-weight:300;
-    font-size:1.5vw;
-    font-weight:100;
-    text-decoration:none;
-}
-    </style>
+<link rel="stylesheet" href="./style.css">
+<script
+			  src="https://code.jquery.com/jquery-3.6.0.js"
+			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			  crossorigin="anonymous"></script>
 <body>
         <!-- div for menu bar -->
-<div class="menu", id="menu">
+<div id = "menu">
     <center><a href = "./index"><img src="./me.jpg" id = "me"></a></center>
     <h1>Welcome!</h1>
     <p>Here's some links.</p>
-    <ul>
+    <ul id = "links">
       <!--<li><span><a class="icon icon-data" href="./pages/About Me.html">About Me & Website</a></span></li> -->
       <li><a href="https://github.com/Dakoteus">Github</a></li>
       <li><a href="https://www.linkedin.com/in/dakota-wicker-06658013b/">LinkedIn</a></li>
@@ -269,51 +28,36 @@ body { font-size: 1em;}
 <iframe src="https://open.spotify.com/embed/playlist/6n6NheA0d5bfzUqnyYavIr" frameborder="0" allowtransparency="true" allow="encrypted-media" id = "spotify"></iframe>
 <a href = "https://ko-fi.com/dakoteus" id = "ko-fi">ko-fi!</a>
   </div>
+  <h1>
+    Dakota ⌬ Wicker
+    <audio src="./wires.oga"  autoplay></audio>
 
-<div id="container">
-    <div id="content">
-      <div id="about">
-        <h1>
-          <div style='font-size:100%;text-align: center; margin-bottom:20px;'>
-             Dakota ⌬ Wicker
-          </div>
-        </h1>
-          <div class="stage">
-            <div class="pyramid3d">
-              <div class="triangle side1" id="s1"></div>
-              <div class="triangle side2" id="s2"></div>
-              <div class="triangle side3" id ="s3"></div>
-              <div class="triangle side4" id="s4"></div>
-            </div>
-          </div> 
-
-        <h3 style='text-align: center;clear:both' class="subhead">
-          I am a programmer and mathematician based in Rochester, New York.
-        </h3>
-        <center>
-        <div id="boxes">
-        <p id='pleft'>
-          I am most comfortable in C++, Python, and C#.
-         But, I do have experience in Bash, JS, and LaTeX.
-          In the future, I plan to learn languages such as Haskell and Rust if it's convenient. 
-        </p>
-        <p id='pright'>
-            Mathematically, I am comfortable with subjects such as Linear Algebra, Calculus, and Discrete Math,
-            but in my free time I study Abstract Algebra and Category Theory.
-        </p>
-        </div>
-        </center>
-        <center>
+    <div id='subtext' style='text-align: center;clear:both'>
+      I am a programmer and mathematician based in Rochester, New York.
+    </div>
+  </h1>
+  <p id='pleft'>
+    I am most comfortable in C++, Python, and C#. 
+    I also have experience in Bash, JS, and SQL.
+    In the future I plan to learn languages such as Haskell and Rust if it's convenient. 
+    Mathematically, I am comfortable with subjects such as Linear Algebra, Calculus, and Discrete Math,
+    but in my free time I study Abstract Algebra and Category Theory.
         <p id = 'job'>
           I am currently seeking job opportunities anywhere in the United States.
         </p>
-        </center>
-      </div>
+      
+  <div class="stage">
+    <div class="pyramid3d">
+      <div class="triangle side1" id="s1"></div>
+      <div class="triangle side2" id="s2"></div>
+      <div class="triangle side3" id ="s3"></div>
+      <div class="triangle side4" id="s4"></div>
     </div>
   </div>
+  
   <script>
        setTimeout(function openNav() {
-  document.getElementById("menu").style.width = "15%";
+  document.getElementById("menu").style.width = "100%";
   },0);
   function Spotify_Appear()
   {
@@ -321,6 +65,14 @@ body { font-size: 1em;}
     if(state == "inline"){document.getElementById("spotify").style.display = "none";}
     else{document.getElementById("spotify").style.display = "inline";}
   }
+
+  $(document).ready(function(){
+  $(document.body).mousemove(function(e){
+    var x = -((e.pageX + this.offsetLeft) / 20);
+    var y = -((e.pageY + this.offsetTop) / 20);
+    $(this).css('background-position', x + 'px ' + y + 'px');
+  });    
+});
       </script>
 
   </body>
