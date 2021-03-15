@@ -133,7 +133,6 @@ body { font-size: 1em;}
 }
 
 #menu{
-  opacity:.75;
   grid-row:1/4;
   height: 100%; /* Full-height: remove this if you want "auto" height */
   transition: 1s;
@@ -144,12 +143,9 @@ body { font-size: 1em;}
   top: 0px;
   background:#212121;
   font-family: 'Lato', Helvetica, arial, sans-serif;
-  box-shadow: 0 0px 30px 0 rgba(0,0,0,0.11),
+  box-shadow: 0 0px 30px 0 rgba(0,0,0,0.5),
     0 0px 15px 0 rgba(248, 248, 248, 0.150); 
   
-  }
-  #menu:hover{
-    opacity:.95;
   }
   #menu h1{
     text-align: center;
