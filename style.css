@@ -5,7 +5,7 @@ height:100%;
 body {
     display:grid;
     grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
-    grid-template-rows: minmax(min-content,max-content) min-content;
+    grid-template-rows: minmax(min-content,max-content) max-content auto;
     background-color: #141414;
     /*background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEyMCc+Cgk8ZGVmcz4KCQk8cGF0dGVybiBwYXR0ZXJuVW5pdHM9J3VzZXJTcGFjZU9uVXNlJyBpZD0nYycgd2lkdGg9JzYwJyBoZWlnaHQ9JzEyMCcgeD0nMCcgeT0nMCcgdmlld0JveD0nMCAwIDUgMTAnPgoJCQk8cGF0aCBmaWxsLW9wYWNpdHk9JzAnIHN0cm9rZT0nIzI5MjkyOScgc3Ryb2tlLXdpZHRoPScwLjA5JyBkPSdNLTIsMUw3LDEwTS0yLDZMNywxNU0tMiwtNEw3LDUnLz4KCQk8L3BhdHRlcm4+CgkJPHBhdHRlcm4gcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgaWQ9J2MyJyB3aWR0aD0nNjAnIGhlaWdodD0nMTIwJyB4PScxMDAlJyB5PScwJyB2aWV3Qm94PScwIDAgNSAxMCc+CgkJCTxwYXRoIGZpbGwtb3BhY2l0eT0nMCcgc3Ryb2tlPScjMjkyOTI5JyBzdHJva2Utd2lkdGg9JzAuMDknIGQ9J003LDFMLTIsMTBNNyw2TC0yLDE1TTcsLTRMLTIsNScvPgoJCTwvcGF0dGVybj4KCTwvZGVmcz4KCTxyZWN0IHdpZHRoPSc1MCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNjKScvPgoJPHJlY3QgeD0nNTAlJyB3aWR0aD0nNTAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjYzIpJy8+Cjwvc3ZnPg==');*/
     background-image:url('./bg.jpg');
@@ -54,12 +54,22 @@ a {
 a:hover {
     text-decoration: underline;
 }
-p#pleft {
+#middletext
+{
   grid-column: 3/6;
+}
+#tools {
     max-width:100%;
     padding: 1rem;
-    text-align: center;
+    text-align: left;
     font-size: 20px;
+}
+#exp
+{
+  max-width:100%;
+  padding: 1rem;
+  text-align: left;
+  font-size: 20px;
 }
 ul {
     clear:both;
@@ -141,7 +151,7 @@ body { font-size: 1em;}
   overflow: hidden; /* Disable horizontal scroll */
   left: 0px;
   top: 0px;
-  background:#212121;
+  background:#1f1f1f;
   font-family: 'Lato', Helvetica, arial, sans-serif;
   box-shadow: 0 0px 30px 0 rgba(0,0,0,0.5),
     0 0px 15px 0 rgba(248, 248, 248, 0.150); 
@@ -192,7 +202,7 @@ body { font-size: 1em;}
 #job{
   text-align: center;
   grid-column:3/6;
-  font-size:30px;
+  font-size:35px;
 }
 #ko-fi
 {
