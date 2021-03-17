@@ -1,0 +1,63 @@
+/* PYRAMID CODE */
+.stage {
+    -webkit-transform:scale(1.85);
+    transform:scale(1);
+    bottom:15%;
+    right: 12.5%;
+    width: 0; height: 0;
+    position:absolute;
+  }
+  
+  .pyramid3d {
+    position:fixed;
+    width:150px;
+    height:150px;
+  
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateX(75deg) rotate(65deg);
+    transform: rotateX(75deg) rotate(65deg);
+    -webkit-animation: turnPyramid 5s linear infinite;
+    animation: turnPyramid 5s linear infinite;
+  }
+  .triangle {
+    -webkit-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+    width:0px; height:0;
+    background:none;
+    border-style:none;
+    bottom:15%;
+    right: 12.5%;
+    opacity:.5;
+  }
+  .triangle:before{
+    content:"";
+    position: absolute;
+    height: 0px; width: 0px;
+    border-style:dashed;
+    border-width:176px 75px 0 75px;
+  }
+  .side1 { -webkit-transform: translatex(0) rotatey(115.2deg) rotatez(90deg); transform:translatex(0) rotatey(115.2deg) rotatez(90deg);}
+  .side2 { -webkit-transform: translatex(150px) rotatez(90deg) rotatex(64.8deg); transform:translatex(150px) rotatez(90deg) rotatex(64.8deg); }
+  .side3 { -webkit-transform: translatez(0) rotatex(64.8deg); transform:translatez(0) rotatex(64.8deg); }
+  .side4 { -webkit-transform: translatey(150px) rotatex(115.2deg); transform:translatey(150px) rotatex(115.2deg); }
+  .side1:before{ border-color: rgba(100, 100, 100, 0.25) transparent transparent transparent;}
+  .side2:before{ border-color: rgba(130, 130, 130, 0.25) transparent transparent transparent;}
+  .side3:before{ border-color: rgba(120, 120, 120, 0.25) transparent transparent transparent;} 
+  .side4:before{ border-color: rgba(100, 100, 100, 0.25) transparent transparent transparent;}
+  
+  
+  @-webkit-keyframes turnPyramid { 100% { -webkit-transform: rotateX(75deg) rotate(425deg); } }
+  @keyframes turnPyramid { 100% { transform:rotateX(75deg) rotate(425deg); } }
+  
+  
+  /*1070px */
+  @media (max-width: 1463px),(max-height: 700px) {
+      .stage { -webkit-transform:scale(0.75); transform:scale(0.75); margin-right:0px;bottom:13%;}
+  }
+  @media (max-width: 1050px), (max-height:600px) { 
+    .stage {-webkit-transform:scale(0.50); transform:scale(0.50); margin-right:0px; right:10%;bottom:10%; } 
+  }
+  @media (max-width: 740px), (max-height:530px) {
+      .stage {-webkit-transform:scale(0.40); transform:scale(0.40); right: 10%;}
+  }
