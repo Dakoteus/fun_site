@@ -1,17 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 html{height:100%;}
 @media (max-width:1281px) {
-  .triangle{display:none;}
+  .stage{display:none;}
   body
   {
     background-size:cover !important;
     grid-template-columns: repeat(5,1fr) !important;
+    grid-template-rows: minmax(min-content,max-content)!important;
     grid-template-areas:
     ' name name name name name'
     ' . mid mid mid .'
-    ' . footer footer footer .' !important;
+    ' . footer footer footer .' 
+    '. . git . .'!important;
+    justify-items:center !important;
   }
   #menu{display:none;}
+  #git{grid-area:git; display:inline !important;}
 }
 body
 {
@@ -63,6 +67,10 @@ h1
   text-align: center;
   padding:none;
   font-size:35px;
+}
+#git
+{
+display:none;
 }
 #menu
 {
