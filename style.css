@@ -6,7 +6,7 @@ html{height:100%;}
   {
     background-size:cover !important;
     grid-template-columns: repeat(5,1fr) !important;
-    grid-template-rows: minmax(min-content,max-content)!important;
+    grid-template-rows: minmax(min-content,max-content) max-content!important;
     grid-template-areas:
     ' name name name name name'
     ' . mid mid mid .'
