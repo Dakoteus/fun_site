@@ -9,8 +9,9 @@
 			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
 			  crossorigin="anonymous"></script>
 <body>
-        <!-- div for menu bar -->
+<img src="./burger.png" style="display: none; margin-top:10px; margin-left:10px;" id = "burg" onclick=menu()>
 <div id = "menu">
+    <div id="close" onclick="menu()"></div>
     <a href = "./index" id="idx"><img src="./me.jpg" id = "me"></a>
     <h1>Welcome!</h1>
     <p>Here's some links.</p>
@@ -66,6 +67,7 @@
        setTimeout(function openNav() {
   document.getElementById("menu").style.width = "100%";
   },0);
+
   function Spotify_Appear()
   {
     var state = document.getElementById("spotify").style.display;
@@ -80,6 +82,27 @@
     $(this).css('background-position', x + 'px ' + y + 'px');
   });    
   });
+
+  function menu()
+  {
+    if(document.getElementById("menu").style.display !== "none")
+    {
+    document.getElementById("menu").style.display = 'none';
+    document.body.style.gridTemplateColumns = 'repeat(5, 1fr)';
+    document.body.style.gridTemplateRows = 'minmax(min-content,max-content) max-content';
+    document.body.style.gridTemplateAreas = '"burg name name name ." ". mid mid mid ." ". footer footer footer ."'; 
+    document.getElementById("burg").style.display = 'block';
+    }
+    else
+    {
+      document.getElementById("burg").style.display = "none";
+      document.body.style.gridTemplateColumns = "repeat(6, 1fr)";
+      document.body.style.gridTemplateRows = "minmax(min-content,max-content) max-content auto";
+      document.body.style.gridTemplateAreas = '"sidebar name name name name name" "sidebar . mid mid mid ." "sidebar . footer footer footer ."';
+      document.getElementById("menu").style.display = "inline";
+    }
+  }
+
   </script>
 
   </body>
