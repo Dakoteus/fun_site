@@ -81,7 +81,7 @@ display:none;
   width: 0%; /* Set the width of the sidebar */
   position: relative; /* Fixed Sidebar (stay in place on scroll) */
   overflow: hidden; /* Disable horizontal scroll */
-  background:#1f1f1f;
+  background:#222222;
   font-family: 'Lato', Helvetica, arial, sans-serif;
   box-shadow: 0 0px 20px 0 rgba(0,0,0,0.3),
     0 0px 15px 0 rgba(255, 254, 239, 0.10);
